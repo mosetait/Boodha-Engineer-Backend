@@ -74,11 +74,11 @@ const NODE_ENV = "production";
 
 // Serve frontend
 if (NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "./dist")));
+    app.use(express.static(path.join(__dirname, "./BEdist")));
   
     app.get("*", (req, res) =>
         res.sendFile(
-            path.resolve(__dirname, "./" , "dist", "index.html")
+            path.resolve(__dirname, "./" , "BEdist", "index.html")
         )
     );
 } else {
